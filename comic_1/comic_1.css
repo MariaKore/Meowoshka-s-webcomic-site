@@ -13,6 +13,21 @@ a {
     transition: 0.4s;
 }
 
+h2 {
+    font-size: 2.5rem; 
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 0;
+}
+
 /* rainbow hover effect */
 a:hover {
     background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
@@ -56,7 +71,7 @@ a:hover {
 /* create cute article-like pages */
 .chapters {
     display: flex;
-    gap: 20px; /* idk */
+    flex-direction: column;
     background-color: #ffdef2;
     padding: 20px;
     border: 2px solid #ff4df0;
@@ -66,7 +81,15 @@ a:hover {
     height: 400px;
 }
 
-.chapters li  /* idk if we need this line !! */ {
-    margin-left: 30px;
+.chapters li {
+    padding: 10px 0;
+    border-bottom: 2px dashed #ff4df0;
 }
 
+.chapters li:last-child {
+    border-bottom: none;
+}
+
+.chapters li::before {
+    content: "🐾 ";
+}
